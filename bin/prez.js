@@ -39,7 +39,9 @@ build(from, to, {
   "slides": args.s || args["slides-dir"] || "slides",
   "skipReveal": args["skip-reveal"],
   "skipIndex": args["skip-index"],
-  "skipUser": args["skip-user"]
+  "skipUser": args["skip-user"],
+  "theme": args.theme || "solarized",
+  "dynamicTheme": !args["no-dynamic-theme"]
 }, notify);
 
 
