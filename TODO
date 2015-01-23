@@ -1,0 +1,7 @@
+* Build (prioritaire) : md2reveal → crée "build" avec la présentation depuis slides
+* injection custom.css
+* injection plugins custom?
+* Rendu PDF: md2reveal --print output.pdf → phantomjs /…/reveal.js/plugin/print-pdf.js "http://localhost:…/?print-pdf" output.pdf
+* rendu pdf avec notes : md2reveal --print output.pdf --with-notes
+* injecter un logo sur toutes les pages : md2reveal --print output.pdf --insert logo.png
+* initialisation du workspace : md2reveal --init → crée un reveal-options.js, custom-styles.css, quelques slides bidon

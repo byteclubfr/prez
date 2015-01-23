@@ -1,0 +1,24 @@
+{
+  "name": "prez",
+  "version": "1.0.0",
+  "description": "Generate Reveal.js slideshows",
+  "main": "index.js",
+  "bin": {
+    "prez": "bin/prez.js"
+  },
+  "dependencies": {
+    "colors": "^1.0.3",
+    "fs-extra": "^0.15.0",
+    "highlight.js": "^8.4.0",
+    "lodash": "^2.4.1",
+    "marked": "^0.3.2",
+    "optimist": "^0.6.1",
+    "reveal.js": "^3.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nicolas Chambrier <naholyr@gmail.com>",
+  "license": "ISC"
+}
