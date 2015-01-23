@@ -1,3 +1,6 @@
+[![npm version](https://badge.fury.io/js/prez.svg)](http://badge.fury.io/js/prez)
+[![Dependency Status](https://david-dm.org/lmtm/prez.png)](https://david-dm.org/lmtm/prez)
+
 ## prez
 
 Opiniated Reveal slideshow generator.
