@@ -11,7 +11,30 @@ Opiniated Reveal slideshow generator with nice PDF output and ability to treat n
 npm install -g prez
 ```
 
-### Initialize sample workspace
+### Feel the magic
+
+In your terminal, go to an empty directory and run:
+
+```sh
+prez --init
+```
+
+A sample workspace has been generated for you. Then run:
+
+```sh
+prez --serve --print --print-theme=simple --watch
+```
+
+* edit your slides from `slides` folder (html or markdown)
+* if you need some assets, you can work in `images`, `css`, `js`, `media` folders and use `includes.txt`
+* your slideshow is automatically built into `build` folder
+* your slideshow is hosted and your browser is opened to localhost:9000
+* any change you make will rebuild and refresh your browser
+* oh, and a printer-friendly `slides.pdf` is automatically generated on any change too
+
+### Step by step
+
+#### Initialize sample workspace
 
 ```sh
 mkdir sandbox
@@ -22,7 +45,7 @@ prez --init
 
 This will create a full workspace with `js`, `images`, etc… where you'll put your custom content. In reality the only required folder is `slides`.
 
-### Build
+#### Build
 
 ```sh
 prez
@@ -30,15 +53,27 @@ prez
 
 This will create a `build` folder with your slideshow.
 
-### Show
-
-At this time, you must serve folder yourself. `lr-http-server` does the job well, with live-reload included.
+#### Show
 
 ```sh
-npm install -g lr-http-server
-cd build
-lr-http-server
+prez --serve
 ```
+
+This will run a server on port 9000 and open your local browser to your slideshow.
+
+#### Print
+
+```sh
+prez --print --print-theme=simple
+```
+
+This will generate "slides.pdf" from your slideshow.
+
+### Such notes!
+
+Option `--such-notes` modifies the print layout and the notes popup so that notes have more space.
+
+Screenshots to come…
 
 ### Usage
 
@@ -72,3 +107,5 @@ Available options:
 
 * Lazier reprint in watch mode
 * FIX issue with notes too tall in printed pdf
+* Put screenshots to compare normal mode and "such notes" mode
+* Better styles for "such notes" mode
