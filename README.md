@@ -75,6 +75,7 @@ Available options:
 * `-p <port>`, `--port=<port>`: modify http server port (default 9000)
 * `--no-live-reload`: disable live-reload when serving slideshow
 * `--no-open-browser`: do not open local browser automatically when serving slideshow
+* `--no-update-notifier`: disable version checking
 
 ### TODO
 

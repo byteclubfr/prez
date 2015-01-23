@@ -36,6 +36,15 @@ if (args.init) {
 }
 
 
+if (!args["no-update-notifier"]) {
+  var pkg = require("./package.json");
+  require("update-notifier")({
+    packageName:    pkg.name,
+    packageVersion: pkg.version
+  }).notify();
+}
+
+
 build(from, to, {
   "slides": args.s || args["slides-dir"] || "slides",
   "skipReveal": args["skip-reveal"],
