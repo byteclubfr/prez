@@ -16,14 +16,14 @@ if (args.h || args.help) {
 
 var from = args._[0];
 if (!from) {
-  console.error("[%s] %s", "warning".yellow, "Source folder not specified: use cwd");
+  console.error("[%s] %s", "warn".yellow, "Source folder not specified: use cwd");
   from = ".";
 }
 from = path.resolve(from);
 
 var to = args._[1];
 if (!to) {
-  console.error("[%s] %s", "warning".yellow, "Destination folder not specified: use 'build'");
+  console.error("[%s] %s", "warn".yellow, "Destination folder not specified: use 'build'");
   to = "build";
 }
 to = path.resolve(to);
@@ -45,6 +45,7 @@ build(from, to, {
 
 
 function notify (type, file, what) {
+  var level = "info".cyan;
   var info = what;
 
   file = path.relative(process.cwd(), file);
@@ -52,8 +53,11 @@ function notify (type, file, what) {
   if (type === "copy") {
     info = "to " + path.relative(process.cwd(), what);
   } else if (type === "write") {
-    info = what.length + " bytes";
+    info = "(" + what.length + " bytes)";
+  } else if (type === "cannot copy") {
+    level = "warn".yellow;
+    info = "(file not found)";
   }
 
-  console.log("[%s] %s %s (%s)", "info".cyan, type.bold, file.blue, info);
+  console.log("[%s] %s %s %s", level, type.bold, file.blue, info);
 }
