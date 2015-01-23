@@ -54,6 +54,20 @@ cd build
 lr-http-server
 ```
 
+### Usage
+
+`prez [<source> [<destination>]] [options]`
+
+* `source` is the slideshow workspace (where you'll have your slides and assets), default = `./`
+* `destination` is the target directory, default = `./build/`
+
+Available options:
+
+* `-s <dir>`, `--slides-dir=<dir>`: customize name of the folder containing slides (default = `slides`)
+* `--skip-reveal`: do not copy reveal.js slides into target directory (useful if you want faster build over existing build)
+* `--skip-index`: do not generate `index.html` in target (will remain untouched if already existing)
+* `--skip-user`: do not include user assets
+
 ### TODO
 
 * `prez --serve=8080`: Serve `build` folder (with live-reload?)
