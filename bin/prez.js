@@ -15,6 +15,11 @@ if (args.h || args.help) {
   process.exit(0);
 }
 
+if (args.v || args.version) {
+  cli.version();
+  process.exit(0);
+}
+
 var from = args._[0];
 if (!from) {
   console.error("[%s] %s", "warn".yellow, "Source folder not specified: use cwd");
@@ -37,11 +42,7 @@ if (args.init) {
 
 
 if (!args["no-update-notifier"]) {
-  var pkg = require("./package.json");
-  require("update-notifier")({
-    packageName:    pkg.name,
-    packageVersion: pkg.version
-  }).notify();
+  cli.checkUpdate();
 }
 
 

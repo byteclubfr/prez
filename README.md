@@ -63,6 +63,7 @@ lr-http-server
 
 Available options:
 
+* `-v`, `--version`: show version and exit
 * `-s <dir>`, `--slides-dir=<dir>`: customize name of the folder containing slides (default = `slides`)
 * `--skip-reveal`: do not copy reveal.js slides into target directory (useful if you want faster build over existing build)
 * `--skip-index`: do not generate `index.html` in target (will remain untouched if already existing)
