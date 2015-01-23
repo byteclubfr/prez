@@ -1,6 +1,6 @@
 {
   "name": "prez",
-  "version": "2.1.2",
+  "version": "2.2.0",
   "description": "Generate Reveal.js slideshows",
   "main": "index.js",
   "bin": {
