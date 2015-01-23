@@ -89,6 +89,7 @@ Available options:
 * `--skip-reveal`: do not copy reveal.js slides into target directory (useful if you want faster build over existing build)
 * `--skip-index`: do not generate `index.html` in target (will remain untouched if already existing)
 * `--skip-user`: do not include user assets
+* `--title`: specify the title of your presentation (default = `Prez`)
 * `--theme=<theme>`: choose reveal theme (default = `solarized`)
 * `--no-dynamic-theme`: disable ability to change theme from query string
 * `--print-notes`: enable special print layout with first-class notes

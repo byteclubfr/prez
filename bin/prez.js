@@ -69,7 +69,8 @@ build(from, to, {
   "theme": args.theme || "solarized",
   "dynamicTheme": !args["no-dynamic-theme"],
   "watch": args.w || args.watch,
-  "subCovers": args["sub-covers"]
+  "subCovers": args["sub-covers"],
+  "title": args.title
 }, notify);
 
 if (args.serve) {
