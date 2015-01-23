@@ -12,6 +12,7 @@
     "highlight.js": "^8.4.0",
     "lodash": "^2.4.1",
     "marked": "^0.3.2",
+    "node-watch": "^0.3.4",
     "optimist": "^0.6.1",
     "reveal.js": "^3.0.0"
   },

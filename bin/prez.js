@@ -43,14 +43,15 @@ build(from, to, {
   "print": args.print,
   "printNotes": args["print-notes"],
   "theme": args.theme || "solarized",
-  "dynamicTheme": !args["no-dynamic-theme"]
+  "dynamicTheme": !args["no-dynamic-theme"],
+  "watch": args.w || args.watch
 }, notify);
 
 
 
 function notify (type, file, what) {
   var level = "info".cyan;
-  var info = what;
+  var info = what || "";
 
   file = path.relative(process.cwd(), file);
 
@@ -61,6 +62,12 @@ function notify (type, file, what) {
   } else if (type === "cannot copy") {
     level = "warn".yellow;
     info = "(file not found)";
+  } else if (type === "delete") {
+  } else if (type === "change") {
+    info = "(" + what + ")";
+  } else if (type === "prez-update") {
+    level = "warn".yellow;
+    info = "YOU SHOULD RESTART".red;
   }
 
   console.log("[%s] %s %s %s", level, type.bold, file.blue, info);

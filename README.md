@@ -70,10 +70,10 @@ Available options:
 * `--theme=<theme>`: choose reveal theme (default = `solarized`)
 * `--no-dynamic-theme`: disable ability to change theme from query string
 * `--print-notes`: enable special print layout with first-class notes
+* `-w`, `--watch`: automatically rebuild (lazy) on changes
 
 ### TODO
 
 * `prez --serve=8080`: Serve `build` folder (with live-reload?)
-* `prez --watch`: Automatically rebuild when something changes in source folder
 * `prez --big-notes`: Relayout notes window so that notes have more space
 * `prez --print=output.pdf`: Print to `output.pdf` (should work with watch mode)
