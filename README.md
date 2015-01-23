@@ -3,29 +3,15 @@
 
 ## prez
 
-Opiniated Reveal slideshow generator.
+Opiniated Reveal slideshow generator with nice PDF output and ability to treat notes as first-class content.
 
-Work in progress.
-
-### Why?
-
-I had a mission: print slideshows *with* notes. So I had to customize the print output, make notes visible, struggle with the contents in `<aside>` (not really markdown, not really html, deal with it), and finally throw it all.
-
-Frustrated by `Reveal`'s dumb way of handling side notes from markdown files (yes, that's an edge case), I needed to generate a full `index.html` from a set of `Markdown` files.
-
-`yo reveal` could have done the trick, but its complexity failed me.
-
-Beside, I don't want final result to be bloated with stupid Gruntfile.
-
-### How?
-
-#### Install
+### Install
 
 ```sh
 npm install -g prez
 ```
 
-#### Initialize sample workspace
+### Initialize sample workspace
 
 ```sh
 mkdir sandbox
@@ -36,7 +22,7 @@ prez --init
 
 This will create a full workspace with `js`, `images`, etc… where you'll put your custom content. In reality the only required folder is `slides`.
 
-#### Build
+### Build
 
 ```sh
 prez
@@ -44,7 +30,7 @@ prez
 
 This will create a `build` folder with your slideshow.
 
-#### Show
+### Show
 
 At this time, you must serve folder yourself. `lr-http-server` does the job well, with live-reload included.
 
@@ -81,3 +67,8 @@ Available options:
 * `--print-theme=<theme>`: theme to be used for pdf output (default = no override)
 * `--phantomjs=<path to phantomjs>`: path to phantomjs (default = `phantomjs`)
 * `--no-update-notifier`: disable version checking
+
+### TODO
+
+* Lazier reprint in watch mode
+* FIX issue with notes too tall in printed pdf
