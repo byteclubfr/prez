@@ -45,6 +45,18 @@ if (!args["no-update-notifier"]) {
   cli.checkUpdate();
 }
 
+var killServerAfterPrint = false;
+
+if (args.print && !args.serve) {
+  console.error("[%s] %s", "warn".yellow, "Using option --print without --serve: use random port");
+  args.serve = true;
+  args.port = "auto";
+  args["no-live-reload"] = true;
+  args["no-open-browser"] = true;
+  // One-shot server: kill it once print done
+  killServerAfterPrint = true;
+}
+
 
 build(from, to, {
   "slides": args.s || args["slides-dir"] || "slides",
@@ -52,10 +64,12 @@ build(from, to, {
   "skipIndex": args["skip-index"],
   "skipUser": args["skip-user"],
   "print": args.print,
+  "printTheme": args["print-theme"],
+  "phantomjs": args.phantomjs,
   "suchNotes": args["such-notes"],
   "theme": args.theme || "solarized",
   "dynamicTheme": !args["no-dynamic-theme"],
-  "watch": args.w || args.watch,
+  "watch": args.w || args.watch
 }, notify);
 
 if (args.serve) {
@@ -81,6 +95,7 @@ function notify (type, file, what) {
     level = "warn".yellow;
     info = "(file not found)";
   } else if (type === "delete") {
+    info = "(deleted)";
   } else if (type === "change") {
     info = "(" + what + ")";
   } else if (type === "prez-update") {
@@ -93,6 +108,19 @@ function notify (type, file, what) {
   } else if (type === "listen") {
     type = "started server";
     info = "on port " + what;
+  } else if (type === "print-ok") {
+    type = "print";
+    info = "(OK)";
+    if (killServerAfterPrint) {
+      process.emit("kill-server");
+    }
+  } else if (type === "print-fail") {
+    level = "error".red;
+    type = "print";
+    info = "(FAIL code " + what + ")";
+    if (killServerAfterPrint) {
+      process.emit("kill-server");
+    }
   }
 
   console.log("[%s] %s %s %s", level, type.bold, file.blue, info);
