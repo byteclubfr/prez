@@ -1,0 +1,34 @@
+#current-slide {
+  width: 50%;
+  height: 50%;
+  top: 15%;
+}
+
+#upcoming-slide {
+  position: absolute;
+  width: 50%;
+  height: 30%;
+  left: 0;
+  top: 65%;
+}
+
+#speaker-controls {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 50%;
+  overflow: visible;
+  height: 100%;
+}
+
+.speaker-controls-time {
+  position: absolute;
+  width: 60%;
+  top: 0;
+  left: -80%;
+}
+
+.speaker-controls-notes {
+  height: 90%;
+  overflow: auto;
+}

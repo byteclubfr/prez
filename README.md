@@ -71,14 +71,10 @@ Available options:
 * `--theme=<theme>`: choose reveal theme (default = `solarized`)
 * `--no-dynamic-theme`: disable ability to change theme from query string
 * `--print-notes`: enable special print layout with first-class notes
+* `--such-notes`: focus on notes, which will enable a special print layout with notes as first-class content, and more space for them in the notes popup
 * `-w`, `--watch`: automatically rebuild (lazy) on changes
 * `--serve[=<port>]`: serve slideshow (you can specify port here or use `--port`)
 * `-p <port>`, `--port=<port>`: modify http server port (default 9000)
 * `--no-live-reload`: disable live-reload when serving slideshow
 * `--no-open-browser`: do not open local browser automatically when serving slideshow
 * `--no-update-notifier`: disable version checking
-
-### TODO
-
-* `prez --big-notes`: Relayout notes popup so that notes have more space
-* `prez --print=output.pdf`: Print to `output.pdf` (should work with watch mode)

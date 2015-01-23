@@ -52,7 +52,7 @@ build(from, to, {
   "skipIndex": args["skip-index"],
   "skipUser": args["skip-user"],
   "print": args.print,
-  "printNotes": args["print-notes"],
+  "suchNotes": args["such-notes"],
   "theme": args.theme || "solarized",
   "dynamicTheme": !args["no-dynamic-theme"],
   "watch": args.w || args.watch,
@@ -75,6 +75,9 @@ function notify (type, file, what) {
   } else if (type === "write") {
     info = "(" + what.length + " bytes)";
   } else if (type === "cannot copy") {
+    level = "warn".yellow;
+    info = "(file not found)";
+  } else if (type === "cannot read") {
     level = "warn".yellow;
     info = "(file not found)";
   } else if (type === "delete") {
