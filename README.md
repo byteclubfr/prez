@@ -102,6 +102,7 @@ Available options:
 * `--print-theme=<theme>`: theme to be used for pdf output (default = no override)
 * `--phantomjs=<path to phantomjs>`: path to phantomjs (default = `phantomjs`)
 * `--no-update-notifier`: disable version checking
+* `--sub-covers`: auto generate cover slides with the dir name as a h1 for each group of vertical slides
 
 ### TODO
 

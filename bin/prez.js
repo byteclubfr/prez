@@ -57,7 +57,6 @@ if (args.print && !args.serve) {
   killServerAfterPrint = true;
 }
 
-
 build(from, to, {
   "slides": args.s || args["slides-dir"] || "slides",
   "skipReveal": args["skip-reveal"],
@@ -69,7 +68,8 @@ build(from, to, {
   "suchNotes": args["such-notes"],
   "theme": args.theme || "solarized",
   "dynamicTheme": !args["no-dynamic-theme"],
-  "watch": args.w || args.watch
+  "watch": args.w || args.watch,
+  "subCovers": args["sub-covers"]
 }, notify);
 
 if (args.serve) {
