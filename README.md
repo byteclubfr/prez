@@ -71,9 +71,12 @@ Available options:
 * `--no-dynamic-theme`: disable ability to change theme from query string
 * `--print-notes`: enable special print layout with first-class notes
 * `-w`, `--watch`: automatically rebuild (lazy) on changes
+* `--serve[=<port>]`: serve slideshow (you can specify port here or use `--port`)
+* `-p <port>`, `--port=<port>`: modify http server port (default 9000)
+* `--no-live-reload`: disable live-reload when serving slideshow
+* `--no-open-browser`: do not open local browser automatically when serving slideshow
 
 ### TODO
 
-* `prez --serve=8080`: Serve `build` folder (with live-reload?)
-* `prez --big-notes`: Relayout notes window so that notes have more space
+* `prez --big-notes`: Relayout notes popup so that notes have more space
 * `prez --print=output.pdf`: Print to `output.pdf` (should work with watch mode)

@@ -8,15 +8,21 @@
   },
   "dependencies": {
     "colors": "^1.0.3",
+    "connect-livereload": "^0.5.2",
     "fs-extra": "^0.15.0",
     "highlight.js": "^8.4.0",
     "lodash": "^2.4.1",
     "marked": "^0.3.2",
+    "minimatch": "^2.0.1",
     "node-watch": "^0.3.4",
     "optimist": "^0.6.1",
-    "reveal.js": "^3.0.0"
+    "reveal.js": "^3.0.0",
+    "serve-index": "^1.6.0",
+    "serve-static": "^1.8.1",
+    "connect": "^3.3.4",
+    "open": "0.0.5",
+    "tiny-lr": "^0.1.4"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
