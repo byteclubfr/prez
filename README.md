@@ -69,10 +69,11 @@ Available options:
 * `--skip-user`: do not include user assets
 * `--theme=<theme>`: choose reveal theme (default = `solarized`)
 * `--no-dynamic-theme`: disable ability to change theme from query string
+* `--print-notes`: enable special print layout with first-class notes
 
 ### TODO
 
 * `prez --serve=8080`: Serve `build` folder (with live-reload?)
 * `prez --watch`: Automatically rebuild when something changes in source folder
+* `prez --big-notes`: Relayout notes window so that notes have more space
 * `prez --print=output.pdf`: Print to `output.pdf` (should work with watch mode)
-* `prez --print=output.pdf --with-notes`: Special mode where notes appear in final pdf

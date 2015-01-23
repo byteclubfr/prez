@@ -40,6 +40,8 @@ build(from, to, {
   "skipReveal": args["skip-reveal"],
   "skipIndex": args["skip-index"],
   "skipUser": args["skip-user"],
+  "print": args.print,
+  "printNotes": args["print-notes"],
   "theme": args.theme || "solarized",
   "dynamicTheme": !args["no-dynamic-theme"]
 }, notify);
