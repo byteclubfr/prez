@@ -3,7 +3,7 @@
 
 ## prez
 
-Opiniated Reveal slideshow generator with nice PDF output and ability to treat notes as first-class content.
+Opiniated [Reveal slideshow](http://lab.hakim.se/reveal-js) generator with nice PDF output and ability to treat [notes](https://github.com/hakimel/reveal.js#speaker-notes) as first-class content.
 
 ### Install
 
