@@ -67,6 +67,7 @@ build(from, to, {
   "phantomjs": args.phantomjs,
   "suchNotes": args["such-notes"],
   "theme": args.theme || "solarized",
+  "highlightTheme": args['highlight-theme'] || "zenburn",
   "dynamicTheme": !args["no-dynamic-theme"],
   "watch": args.w || args.watch,
   "subCovers": args["sub-covers"],
