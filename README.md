@@ -90,7 +90,7 @@ Available options:
 * `--skip-index`: do not generate `index.html` in target (will remain untouched if already existing)
 * `--skip-user`: do not include user assets
 * `--title=<title>`: specify the title of your presentation (default = `Prez`)
-* `--theme=<theme>`: choose reveal theme (default = `solarized`)
+* `--theme=<theme>`: choose [reveal theme](https://github.com/hakimel/reveal.js/tree/master/css/theme) (default = `solarized`)
 * `--highlight-theme=<theme>`: choose [highlight.js theme](https://github.com/isagalaev/highlight.js/tree/master/src/styles) (default = `zenburn`)
 * `--no-dynamic-theme`: disable ability to change theme from query string
 * `--print-notes`: enable special print layout with first-class notes
