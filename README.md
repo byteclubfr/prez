@@ -32,6 +32,11 @@ prez --serve --print --print-theme=simple --watch
 * any change you make will rebuild and refresh your browser
 * oh, and a printer-friendly `slides.pdf` is automatically generated on any change too
 
+### Slides structure and format
+
+* Slides and chapters are sorted by name
+*
+
 ### Step by step
 
 #### Initialize sample workspace
