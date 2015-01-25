@@ -34,8 +34,38 @@ prez --serve --print --print-theme=simple --watch
 
 ### Slides structure and format
 
-* Slides and chapters are sorted by name
-*
+* Slides and chapters are sorted by name.
+* You can number your slides to ensure order by adding a "*number*-" prefix, it will be automagically stripped out.
+* Each slide will have an id generated from filename (removing accents and spaces).
+* If you use `--sub-covers` the title is the stripped name, accents and case remain untouched.
+
+#### Sample structure
+
+```
+images/
+js/
+css/
+slides/
+  01-intro.md
+  02-Chapter 1/
+    01-hello-world.md
+    02-bonjour-monde.md
+  03-conclusion.md
+```
+
+#### Sample slide
+
+```md
+# Slide's title
+
+Content of your slide
+
+note:
+
+Your notes go here.
+
+Complex (multiline, code samples, etc.) notes are really supported only with --such-notes.
+```
 
 ### Step by step
 
