@@ -11,7 +11,7 @@ body, .reveal .slides {
   min-height: 105mm !important;
   overflow: visible !important;
   font-size: 0.5em;
-  border: 2px solid #ccc;
+  border: 1mm solid #eee;
 }
 
 .reveal section.stack {
