@@ -13,6 +13,20 @@ window.addEventListener("load", function () {
   for (var j = 0; j < sections.length; j++) {
     var section = sections[j];
 
+    // data-background not supported
+    if (section.getAttribute("data-background")) {
+      section.innerHTML = "<p>Slide background not included in print support</p>" + section.innerHTML;
+      section.removeAttribute("data-background");
+    }
+    if (section.getAttribute("data-background-video")) {
+      section.innerHTML = "<p>Video background not included in print support</p>" + section.innerHTML;
+      section.removeAttribute("data-background-video");
+    }
+    if (section.getAttribute("data-background-iframe")) {
+      section.innerHTML = "<p>Video background not included in print support</p>" + section.innerHTML;
+      section.removeAttribute("data-background-iframe");
+    }
+
     if (!section.querySelector("aside.notes") && prev && !prev.querySelector("aside.notes")) {
       // Two consecutive unannotated? Merge!
       prev.classList.add("merge-next");
