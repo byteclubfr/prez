@@ -76,7 +76,7 @@ build(from, to, {
 
 if (args.serve) {
   console.log("[%s] %s slideshows from %s…", "info".cyan, "serve".bold, path.relative(process.cwd(), to).blue);
-  serve(args.p || args.port || args.serve, to, !args["no-live-reload"], null, null, !args["no-open-browser"], notify);
+  serve(args.p || args.port || args.serve, to, args["live-reload"] !== false, null, null, args["open-browser"] !== false, notify);
 }
 
 
