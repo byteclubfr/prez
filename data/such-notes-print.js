@@ -4,7 +4,7 @@ window.addEventListener("load", function () {
     var link = document.createElement("link");
     link.rel = "stylesheet";
     link.type = "text/css";
-    link.href = "css/print-with-notes.css";
+    link.href = "css/such-notes-print.css";
     document.getElementsByTagName("head")[0].appendChild(link);
   }
 
