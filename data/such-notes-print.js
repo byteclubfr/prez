@@ -1,5 +1,4 @@
-window.addEventListener("load", function () {
-
+(function () {
   if (window.location.search.match(/print-pdf/gi)) {
     var link = document.createElement("link");
     link.rel = "stylesheet";
@@ -38,4 +37,4 @@ window.addEventListener("load", function () {
       prev = section;
     }
   }
-});
+})();
