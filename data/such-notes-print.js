@@ -8,16 +8,10 @@ window.addEventListener("load", function () {
     document.getElementsByTagName("head")[0].appendChild(link);
   }
 
-  var sections = document.querySelectorAll("section");
+  var sections = document.querySelectorAll("section.slide");
   var prev = null, prevHasNotes = false;
   for (var j = 0; j < sections.length; j++) {
     var section = sections[j];
-
-    if (section.classList.contains("stack")) {
-      // New stack, reset merge
-      prev = null;
-      continue;
-    }
 
     if (!section.querySelector("aside.notes") && prev && !prev.querySelector("aside.notes")) {
       // Two consecutive unannotated? Merge!
