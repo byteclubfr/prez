@@ -67,6 +67,19 @@ Your notes go here.
 Complex (multiline, code samples, etc.) notes are really supported only with --such-notes.
 ```
 
+#### Customize slide attributes
+
+You can set per-slide properties like general style, [background](https://github.com/hakimel/reveal.js/#slide-backgrounds) or [transition](https://github.com/hakimel/reveal.js/#slide-transitions) by adding special lines at **the head of your slides**:
+
+* `$class:some class$` add class
+* `$id:id$` replace automatic id, if you set it to "none", it will remove any id on the slide
+* Any other property will be added as a data-attribute, here are some examples supported by Reveal:
+  * `$background:/path/to/image.jpg$`
+  * `$background-video:/path/to/video.webm$`
+  * `$background-iframe:http://mysite.com$`
+  * `$transition:zoom$`
+  * `$transition-speed:fast$`
+
 ### Step by step
 
 #### Initialize sample workspace
