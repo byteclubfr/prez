@@ -6,7 +6,7 @@
   }
 
   // Also change highlight.js theme!
-  var highlightTheme = Reveal.getQueryHash()['highlight-theme'];
+  var highlightTheme = Reveal.getQueryHash().highlightTheme;
   if (highlightTheme) {
     document.getElementById('highlight-theme').setAttribute('href', 'css/highlight/styles/' + highlightTheme + '.css');
   }
