@@ -53,3 +53,9 @@ body, .reveal .slides {
   top: -100mm !important;
 }
 /**/
+
+/* remove background until positionning is fixed */
+.backgrounds,
+.slide-background {
+  background-image: none !important;
+}
