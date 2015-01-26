@@ -1,7 +1,7 @@
 // Custom JS code can go here
 
 // You can customize Reveal options:
-REVEAL_OPTIONS.center = false;
+Reveal.configure({"center": false});
 
 
 // (an outdated version of) http://headjs.com/ is also loaded

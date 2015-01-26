@@ -45,7 +45,7 @@
     <script>
     // Full list of configuration options available at:
     // https://github.com/hakimel/reveal.js#configuration
-    REVEAL_OPTIONS = {
+    Reveal.initialize({
       controls: true,
       progress: true,
       history: true,
@@ -61,14 +61,10 @@
         { src: 'plugin/zoom-js/zoom.js', async: true },
         { src: 'plugin/notes/notes.js', async: true }
       ]
-    };
+    });
     </script>
 
     <!-- INCLUDE JS HERE -->
-
-    <script>
-      Reveal.initialize(REVEAL_OPTIONS);
-    </script>
 
   </body>
 </html>
