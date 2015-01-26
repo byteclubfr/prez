@@ -5,11 +5,14 @@ body, .reveal .slides {
 .reveal .slides section {
   top: 5mm !important;
   left: 5mm !important;
+  overflow: visible !important;
+}
+
+.reveal .slides section.slide {
   width: 135mm !important;
   min-width: 135mm !important;
   height: 105mm !important;
   min-height: 105mm !important;
-  overflow: visible !important;
   font-size: 0.5em;
   border: 1mm solid #eee;
 }
@@ -34,6 +37,19 @@ body, .reveal .slides {
   height: 200mm;
   text-align: left;
   font-size: 16px;
+}
+
+/* reduce margins in notes */
+
+.reveal aside.notes h1, .reveal aside.notes h2, .reveal aside.notes h3, .reveal aside.notes h4, .reveal aside.notes h5, .reveal aside.notes h6 {
+  margin: 0 0 5px 0;
+}
+.reveal aside.notes p {
+  margin: 5px 0
+}
+.reveal aside.notes pre {
+  margin: 5px;
+  font-size: 0.66em; /* bigger code, as 0.55*16px is smaaaaal */
 }
 
 /* merge with next/prev slide */
