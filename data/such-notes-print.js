@@ -13,15 +13,15 @@
 
       // data-background not supported
       if (section.getAttribute("data-background")) {
-        section.innerHTML = "<p>Slide background not included in print support</p>" + section.innerHTML;
+        section.innerHTML = "<p class=\"print-warning\">Slide background not included in print support</p>" + section.innerHTML;
         section.removeAttribute("data-background");
       }
       if (section.getAttribute("data-background-video")) {
-        section.innerHTML = "<p>Video background not included in print support</p>" + section.innerHTML;
+        section.innerHTML = "<p class=\"print-warning\">Video background not included in print support</p>" + section.innerHTML;
         section.removeAttribute("data-background-video");
       }
       if (section.getAttribute("data-background-iframe")) {
-        section.innerHTML = "<p>Video background not included in print support</p>" + section.innerHTML;
+        section.innerHTML = "<p class=\"print-warning\">Video background not included in print support</p>" + section.innerHTML;
         section.removeAttribute("data-background-iframe");
       }
 
