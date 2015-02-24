@@ -25,7 +25,7 @@ A sample workspace has been generated for you. Then run:
 prez --serve --print --print-theme=simple --watch
 ```
 
-* edit your slides from `slides` folder (html or markdown)
+* edit your slides from `slides` folder (html or [markdown](https://www.npmjs.com/package/marked))
 * if you need some assets, you can work in `images`, `css`, `js`, `media` folders and use `includes.txt`
 * your slideshow is automatically built into `build` folder
 * your slideshow is hosted and your browser is opened to localhost:9000
