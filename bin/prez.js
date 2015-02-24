@@ -62,6 +62,7 @@ build(from, to, {
   "skipReveal": args["skip-reveal"],
   "skipIndex": args["skip-index"],
   "skipUser": args["skip-user"],
+  "keepHidden": args["keep-hidden"],
   "print": args.print,
   "printTheme": args["print-theme"],
   "phantomjs": args.phantomjs,

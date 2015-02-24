@@ -35,6 +35,7 @@ prez --serve --print --print-theme=simple --watch
 ### Slides structure and format
 
 * Slides and chapters are sorted by name.
+* If a slide or a chapter name starts with a dot `.` (hidden), it will be skipped. (or use `--keep-hidden`)
 * You can number your slides to ensure order by adding a "*number*-" prefix, it will be automagically stripped out.
 * Each slide will have an id generated from filename (removing accents and spaces).
 * If you use `--sub-covers` the title is the stripped name, accents and case remain untouched.
@@ -137,6 +138,7 @@ Available options:
 * `--skip-reveal`: do not copy reveal.js slides into target directory (useful if you want faster build over existing build)
 * `--skip-index`: do not generate `index.html` in target (will remain untouched if already existing)
 * `--skip-user`: do not include user assets
+* `--keep-hidden`: render slides or chapters starting with a dot `.`
 * `--title=<title>`: specify the title of your presentation (default = `Prez`)
 * `--theme=<theme>`: choose [reveal theme](https://github.com/hakimel/reveal.js/tree/master/css/theme) (default = `solarized`)
 * `--highlight-theme=<theme>`: choose [highlight.js theme](https://github.com/isagalaev/highlight.js/tree/master/src/styles) (default = `zenburn`)
