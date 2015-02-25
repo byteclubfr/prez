@@ -57,6 +57,8 @@ if (args.print && !args.serve) {
   killServerAfterPrint = true;
 }
 
+var packageInfo = getPackageInfo();
+
 build(from, to, {
   "slides": args.s || args["slides-dir"] || "slides",
   "skipReveal": args["skip-reveal"],
@@ -72,14 +74,16 @@ build(from, to, {
   "dynamicTheme": !args["no-dynamic-theme"],
   "watch": args.w || args.watch,
   "subCovers": args["sub-covers"],
-  "title": args.title
+  // meta
+  "title": args.title || packageInfo.name || "Prez",
+  "author": args.author || packageInfo.author,
+  "description": args.description || packageInfo.description
 }, notify);
 
 if (args.serve) {
   console.log("[%s] %s slideshows from %s…", "info".cyan, "serve".bold, path.relative(process.cwd(), to).blue);
   serve(args.p || args.port || args.serve, to, args["live-reload"] !== false, null, null, args["open-browser"] !== false, notify);
 }
-
 
 function notify (type, file, what) {
   var level = "info".cyan;
@@ -127,4 +131,21 @@ function notify (type, file, what) {
   }
 
   console.log("[%s] %s %s %s", level, type.bold, file.blue, info);
+}
+
+// attempt to read package.json
+function getPackageInfo () {
+  var packageInfo;
+  try {
+    var pathToPackage = path.resolve(process.cwd(), "package.json");
+    packageInfo = require(pathToPackage);
+  } catch(e) {
+    // blank default
+    packageInfo = {
+      "name": "",
+      "author": "",
+      "description": ""
+    };
+  }
+  return packageInfo;
 }

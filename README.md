@@ -131,30 +131,50 @@ Screenshots to come…
 * `source` is the slideshow workspace (where you'll have your slides and assets), default = `./`
 * `destination` is the target directory, default = `./build/`
 
-Available options:
+#### Available options:
 
 * `-v`, `--version`: show version and exit
 * `-s <dir>`, `--slides-dir=<dir>`: customize name of the folder containing slides (default = `slides`)
+
+Assets & slides
+
 * `--skip-reveal`: do not copy reveal.js slides into target directory (useful if you want faster build over existing build)
 * `--skip-index`: do not generate `index.html` in target (will remain untouched if already existing)
 * `--skip-user`: do not include user assets
 * `--keep-hidden`: render slides or chapters starting with a dot `.`
-* `--title=<title>`: specify the title of your presentation (default = `Prez`)
+* `--sub-covers`: auto generate cover slides with the dir name as a h1 for each group of vertical slides
+
+Meta
+
+* `--title=<title>`: specify the title of your presentation (default = `package.json name` if found or `Prez`)
+* `--author=<author>`: specify the author of your presentation (default = `package.json author` if found)
+* `--description=<description>`: specify the description of your presentation (default = `package.json description` if found)
+
+Theme
+
 * `--theme=<theme>`: choose [reveal theme](https://github.com/hakimel/reveal.js/tree/master/css/theme) (default = `solarized`)
 * `--highlight-theme=<theme>`: choose [highlight.js theme](https://github.com/isagalaev/highlight.js/tree/master/src/styles) (default = `zenburn`)
 * `--no-dynamic-theme`: disable ability to change theme from query string
 * `--print-notes`: enable special print layout with first-class notes
 * `--such-notes`: focus on notes, which will enable a special print layout with notes as first-class content, and more space for them in the notes popup
+
+Live server
+
 * `-w`, `--watch`: automatically rebuild (lazy) on changes
 * `--serve[=<port>]`: serve slideshow (you can specify port here or use `--port`)
 * `-p <port>`, `--port=<port>`: modify http server port (default 9000), you can use value `auto` to use a random available port
 * `--no-live-reload`: disable live-reload when serving slideshow
 * `--no-open-browser`: do not open local browser automatically when serving slideshow
+
+Print
+
 * `--print[=<file>]`: print slideshow as pdf (requires `--serve` and phantomjs must be installed)
 * `--print-theme=<theme>`: theme to be used for pdf output (default = no override)
 * `--phantomjs=<path to phantomjs>`: path to phantomjs (default = `phantomjs`)
+
+Misc
+
 * `--no-update-notifier`: disable version checking
-* `--sub-covers`: auto generate cover slides with the dir name as a h1 for each group of vertical slides
 
 ### TODO
 
