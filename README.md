@@ -22,7 +22,7 @@ prez --init
 A sample workspace has been generated for you. Then run:
 
 ```sh
-prez --serve --print --print-theme=simple --watch
+prez --serve --print --watch
 ```
 
 * edit your slides from `slides` folder (html or [markdown](https://www.npmjs.com/package/marked))
@@ -122,7 +122,7 @@ This will generate "slides.pdf" from your slideshow.
 
 Option `--such-notes` modifies the print layout and the notes popup so that notes have more space.
 
-Screenshots to come…
+![](such-notes.png)
 
 ### Usage
 
@@ -184,5 +184,3 @@ You can store your default preferences in a configuration file. Take a look at [
 
 * Lazier reprint in watch mode
 * FIX issue with notes too tall in printed pdf
-* Put screenshots to compare normal mode and "such notes" mode
-* Better styles for "such notes" mode
