@@ -176,6 +176,10 @@ Misc
 
 * `--no-update-notifier`: disable version checking
 
+#### Configuration file
+
+You can store your default preferences in a configuration file. Take a look at [CONFIG.md] for details.
+
 ### TODO
 
 * Lazier reprint in watch mode

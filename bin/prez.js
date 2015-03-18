@@ -3,7 +3,7 @@
 "use strict";
 
 var args = require("optimist").argv;
-var colors = require("colors");
+var colors = require("colors"); // extends String prototype
 var cli = require("../lib/cli");
 var build = require("../lib/build");
 var serve = require("../lib/serve");
@@ -57,28 +57,7 @@ if (args.print && !args.serve) {
   killServerAfterPrint = true;
 }
 
-var packageInfo = getPackageInfo();
-
-build(from, to, {
-  "slides": args.s || args["slides-dir"] || "slides",
-  "skipReveal": args["skip-reveal"],
-  "skipIndex": args["skip-index"],
-  "skipUser": args["skip-user"],
-  "keepHidden": args["keep-hidden"],
-  "print": args.print,
-  "printTheme": args["print-theme"],
-  "phantomjs": args.phantomjs,
-  "suchNotes": args["such-notes"],
-  "theme": args.theme || "solarized",
-  "highlightTheme": args['highlight-theme'] || "zenburn",
-  "dynamicTheme": !args["no-dynamic-theme"],
-  "watch": args.w || args.watch,
-  "subCovers": args["sub-covers"],
-  // meta
-  "title": args.title || packageInfo.name || "Prez",
-  "author": args.author || packageInfo.author,
-  "description": args.description || packageInfo.description
-}, notify);
+build(from, to, cli.options(args), notify);
 
 if (args.serve) {
   console.log("[%s] %s slideshows from %s…", "info".cyan, "serve".bold, path.relative(process.cwd(), to).blue);
@@ -131,21 +110,4 @@ function notify (type, file, what) {
   }
 
   console.log("[%s] %s %s %s", level, type.bold, file.blue, info);
-}
-
-// attempt to read package.json
-function getPackageInfo () {
-  var packageInfo;
-  try {
-    var pathToPackage = path.resolve(process.cwd(), "package.json");
-    packageInfo = require(pathToPackage);
-  } catch(e) {
-    // blank default
-    packageInfo = {
-      "name": "",
-      "author": "",
-      "description": ""
-    };
-  }
-  return packageInfo;
 }
