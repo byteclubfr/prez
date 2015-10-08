@@ -20,7 +20,7 @@
     "node-watch": "^0.3.4",
     "open": "0.0.5",
     "optimist": "^0.6.1",
-    "rc": "^1.0.3",
+    "rc": "^1.1.2",
     "reveal.js": "^3.0.0",
     "serve-index": "^1.7.2",
     "serve-static": "^1.8.1",
