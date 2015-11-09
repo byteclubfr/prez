@@ -22,14 +22,14 @@ if (args.v || args.version) {
 
 var from = args._[0];
 if (!from) {
-  console.error("[%s] %s", "warn".yellow, "Source folder not specified: use cwd");
+  warn("Source folder not specified: use cwd");
   from = ".";
 }
 from = path.resolve(from);
 
 var to = args._[1];
 if (!to) {
-  console.error("[%s] %s", "warn".yellow, "Destination folder not specified: use 'build'");
+  warn("Destination folder not specified: use 'build'");
   to = "build";
 }
 to = path.resolve(to);
@@ -48,7 +48,7 @@ if (!args["no-update-notifier"]) {
 var killServerAfterPrint = false;
 
 if (args.print && !args.serve) {
-  console.error("[%s] %s", "warn".yellow, "Using option --print without --serve: use random port");
+  warn("Using option --print without --serve: use random port");
   args.serve = true;
   args.port = "auto";
   args["no-live-reload"] = true;
@@ -110,4 +110,8 @@ function notify (type, file, what) {
   }
 
   console.log("[%s] %s %s %s", level, type.bold, file.blue, info);
+}
+
+function warn (msg) {
+  console.error("[%s] %s", "warn".yellow, msg);
 }
