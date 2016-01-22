@@ -28,7 +28,7 @@
     "update-notifier": "^0.6.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint lib"
   },
   "author": "Nicolas Chambrier <naholyr@gmail.com>",
   "license": "ISC",
@@ -39,5 +39,8 @@
   "bugs": {
     "url": "https://github.com/lmtm/prez/issues"
   },
-  "homepage": "https://github.com/lmtm/prez"
+  "homepage": "https://github.com/lmtm/prez",
+  "devDependencies": {
+    "eslint": "^1.10.3"
+  }
 }
