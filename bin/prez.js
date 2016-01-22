@@ -3,7 +3,7 @@
 "use strict";
 
 var args = require("optimist").argv;
-var colors = require("colors"); // extends String prototype
+var colors = require("colors"); // eslint-disable-line
 var cli = require("../lib/cli");
 var build = require("../lib/build");
 var serve = require("../lib/serve");
