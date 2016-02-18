@@ -1,5 +1,5 @@
 [![npm version](https://badge.fury.io/js/prez.svg)](http://badge.fury.io/js/prez)
-[![Dependency Status](https://david-dm.org/lmtm/prez.png)](https://david-dm.org/lmtm/prez)
+[![Dependency Status](https://david-dm.org/byteclubfr/prez.png)](https://david-dm.org/byteclubfr/prez)
 
 ## prez
 
