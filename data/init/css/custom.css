@@ -1,1 +1,5 @@
 /* custom styles can go here */
+
+#chapter-foo p {
+	text-transform: uppercase;
+}

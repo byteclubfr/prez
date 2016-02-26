@@ -34,7 +34,7 @@ prez --serve --print --watch
 
 ### Slides structure and format
 
-* Slides and chapters are sorted by name.
+* Slides and chapters (vertical stacks) are sorted by name.
 * If a slide or a chapter name starts with a dot `.` (hidden), it will be skipped. (or use `--keep-hidden`)
 * You can number your slides to ensure order by adding a "*number*-" prefix, it will be automagically stripped out.
 * Each slide will have an id generated from filename (removing accents and spaces).
@@ -142,7 +142,7 @@ Assets & slides
 * `--skip-index`: do not generate `index.html` in target (will remain untouched if already existing)
 * `--skip-user`: do not include user assets
 * `--keep-hidden`: render slides or chapters starting with a dot `.`
-* `--sub-covers`: auto generate cover slides with the dir name as a h1 for each group of vertical slides
+* `--sub-covers`: auto generate cover slides with the dir name as a h1 for each chapter (vertical stack of slides)
 
 Meta
 
