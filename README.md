@@ -144,6 +144,11 @@ Assets & slides
 * `--keep-hidden`: render slides or chapters starting with a dot `.`
 * `--sub-covers`: auto generate cover slides with the dir name as a h1 for each chapter (vertical stack of slides)
 
+Custom parser
+
+* `--parser`: parser used to convert slides from Markdown to HTML, available values are:
+  * *marked* (default, depending on [`marked`](https://www.npmjs.com/package/marked) and `highlight.js`, automatically embedded)
+
 Meta
 
 * `--title=<title>`: specify the title of your presentation (default = `package.json name` if found or `Prez`)

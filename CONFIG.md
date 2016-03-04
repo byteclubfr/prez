@@ -35,5 +35,6 @@ Prez uses [rc](https://www.npmjs.com/package/rc):
 * `title`: defaults to your project's `package.json`'s `name` field, or `"Prez"`
 * `author`: defaults to your project's `package.json`'s `author` field, or `""`
 * `description`: defaults to your project's `package.json`'s `description` field, or `""`
+* `parser`: defaults to `"marked"`
 
 Each option matches a [command-line argument](README.md#available-options)
