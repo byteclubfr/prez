@@ -148,6 +148,7 @@ Custom parser
 
 * `--parser`: parser used to convert slides from Markdown to HTML, available values are:
   * *marked* (default, depending on [`marked`](https://www.npmjs.com/package/marked) and `highlight.js`, automatically embedded)
+  * *markdown-it* (requires installation of [`markdown-it`](https://github.com/markdown-it/markdown-it))
   * Path to custom module, relative to current working directory. This module's default export must be a function taking a string (original content) and return a string (converted content). You can use a custom module when you need to call an external command, or our defaults do not match your preferences. You can browser `lib/parsers` to look for our implementations.
 
 Meta
