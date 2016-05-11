@@ -35,12 +35,6 @@ if (!to) {
 to = path.resolve(to);
 fs.ensureDirSync(to);
 
-
-if (args.init) {
-  build.init(from, notify);
-}
-
-
 if (!args["no-update-notifier"]) {
   cli.checkUpdate();
 }

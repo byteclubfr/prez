@@ -138,6 +138,7 @@ Option `--such-notes` modifies the print layout and the notes popup so that note
 
 Assets & slides
 
+* `--init`: populate your new presentation with dummy initial data (see the content of `data/init`)
 * `--skip-reveal`: do not copy reveal.js slides into target directory (useful if you want faster build over existing build)
 * `--skip-index`: do not generate `index.html` in target (will remain untouched if already existing)
 * `--skip-user`: do not include user assets
