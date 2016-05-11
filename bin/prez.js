@@ -70,7 +70,12 @@ function notify (type, file, what) {
 
   file = path.relative(process.cwd(), file);
 
-  if (type === "copy") {
+  if (type === "options") {
+    level = "tips".grey;
+  }
+
+  // fs
+  else if (type === "copy") {
     info = "to " + path.relative(process.cwd(), what);
   } else if (type === "write") {
     info = "(" + what.length + " bytes)";
@@ -84,6 +89,8 @@ function notify (type, file, what) {
     info = "(deleted)";
   } else if (type === "change") {
     info = "(" + what + ")";
+
+  // server
   } else if (type === "prez-update") {
     level = "warn".yellow;
     info = "YOU SHOULD RESTART".red;
@@ -94,6 +101,8 @@ function notify (type, file, what) {
   } else if (type === "listen") {
     type = "started server";
     info = "on port " + what;
+
+  // print
   } else if (type === "print-ok") {
     type = "print";
     info = "(OK)";
