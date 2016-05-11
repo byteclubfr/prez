@@ -76,7 +76,7 @@ function notify (type, file, what) {
 
   // fs
   else if (type === "copy") {
-    info = "to " + path.relative(process.cwd(), what);
+    info = "to " + (path.relative(process.cwd(), what) || ".");
   } else if (type === "write") {
     info = "(" + what.length + " bytes)";
   } else if (type === "cannot copy") {
