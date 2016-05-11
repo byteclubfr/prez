@@ -185,6 +185,7 @@ Print
 Misc
 
 * `--no-update-notifier`: disable version checking
+* `--stats`: display visual stats about your slides and chapters
 
 #### Configuration file
 

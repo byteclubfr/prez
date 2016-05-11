@@ -27,6 +27,11 @@ if (!from) {
 }
 from = path.resolve(from);
 
+if (args.stats) {
+  cli.stats(from, args);
+  process.exit(0);
+}
+
 var to = args._[1];
 if (!to) {
   warn("Destination folder not specified: use 'build'");
