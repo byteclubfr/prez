@@ -187,6 +187,8 @@ Misc
 * `--no-update-notifier`: disable version checking
 * `--stats`: display visual stats about your slides and chapters
 
+![](stats.jpg)
+
 #### Configuration file
 
 You can store your default preferences in a configuration file. Take a look at [CONFIG.md](CONFIG.md) for details.
