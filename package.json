@@ -34,12 +34,12 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lmtm/prez.git"
+    "url": "https://github.com/byteclubfr/prez.git"
   },
   "bugs": {
-    "url": "https://github.com/lmtm/prez/issues"
+    "url": "https://github.com/byteclubfr/prez/issues"
   },
-  "homepage": "https://github.com/lmtm/prez",
+  "homepage": "https://github.com/byteclubfr/prez",
   "devDependencies": {
     "ava": "^0.12.0",
     "eslint": "^2.3.0",
