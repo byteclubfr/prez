@@ -13,6 +13,13 @@ npm install -g prez
 
 ### Feel the magic
 
+Check that you have **node 6** installed:
+
+```sh
+node --version
+6.x.x
+```
+
 In your terminal, go to an empty directory and run:
 
 ```sh
