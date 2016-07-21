@@ -7,6 +7,7 @@ var colors = require("colors"); // eslint-disable-line
 var cli = require("../lib/cli");
 var build = require("../lib/build");
 var serve = require("../lib/serve");
+var { notify, warn } = require("../lib/notify");
 var fs = require("fs-extra");
 var path = require("path");
 
@@ -44,7 +45,7 @@ if (!args["no-update-notifier"]) {
   cli.checkUpdate();
 }
 
-var killServerAfterPrint = false;
+args.killServerAfterPrint = false;
 
 if (args.print && !args.serve) {
   warn("Using option --print without --serve: use random port");
@@ -53,7 +54,7 @@ if (args.print && !args.serve) {
   args["no-live-reload"] = true;
   args["no-open-browser"] = true;
   // One-shot server: kill it once print done
-  killServerAfterPrint = true;
+  args.killServerAfterPrint = true;
 }
 
 build(from, to, cli.options(args), notify);
@@ -63,63 +64,3 @@ if (args.serve) {
   serve(args.p || args.port || args.serve, to, args["live-reload"] !== false, null, null, args["open-browser"] !== false, notify);
 }
 
-function notify (type, file, what) {
-  var level = "info".cyan;
-  var info = what || "";
-
-  file = path.relative(process.cwd(), file);
-
-  if (type === "options") {
-    level = "tips".grey;
-  }
-
-  // fs
-  else if (type === "copy") {
-    info = "to " + (path.relative(process.cwd(), what) || ".");
-  } else if (type === "write") {
-    info = "(" + what.length + " bytes)";
-  } else if (type === "cannot copy") {
-    level = "warn".yellow;
-    info = "(file not found)";
-  } else if (type === "cannot read") {
-    level = "warn".yellow;
-    info = "(file not found)";
-  } else if (type === "delete") {
-    info = "(deleted)";
-  } else if (type === "change") {
-    info = "(" + what + ")";
-
-  // server
-  } else if (type === "prez-update") {
-    level = "warn".yellow;
-    info = "YOU SHOULD RESTART".red;
-  } else if (type === "cannot listen") {
-    level = "error".red;
-    type = "cannot start server";
-    info = "on port " + what;
-  } else if (type === "listen") {
-    type = "started server";
-    info = "on port " + what;
-
-  // print
-  } else if (type === "print-ok") {
-    type = "print";
-    info = "(OK)";
-    if (killServerAfterPrint) {
-      process.emit("kill-server");
-    }
-  } else if (type === "print-fail") {
-    level = "error".red;
-    type = "print";
-    info = "(FAIL code " + what + ")";
-    if (killServerAfterPrint) {
-      process.emit("kill-server");
-    }
-  }
-
-  console.log("[%s] %s %s %s", level, type.bold, file.blue, info);
-}
-
-function warn (msg) {
-  console.error("[%s] %s", "warn".yellow, msg);
-}
