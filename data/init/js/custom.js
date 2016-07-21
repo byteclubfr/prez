@@ -3,9 +3,9 @@
 // You can customize Reveal options:
 Reveal.configure({"center": false});
 
-
-// (an outdated version of) http://headjs.com/ is also loaded
+/* Or load external scripts if needed:
 head.ready("lodash.min.js", function () {
   // LoDash can be used from here
 });
-head.js("https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js");
+head.js("https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.13.1/lodash.min.js");
+*/
