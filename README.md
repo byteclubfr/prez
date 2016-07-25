@@ -198,7 +198,7 @@ Misc
 
 #### Configuration file
 
-You can store your default preferences in a configuration file. Take a look at [CONFIG.md](CONFIG.md) for details.
+You can store your default preferences in a configuration file. Take a look at [CONFIG.md](CONFIG.md) for details and see examples on the [Wiki](https://github.com/byteclubfr/prez/wiki/prezrc-example).
 
 ### TODO
 
