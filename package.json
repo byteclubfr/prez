@@ -41,7 +41,7 @@
   },
   "homepage": "https://github.com/byteclubfr/prez",
   "devDependencies": {
-    "ava": "^0.15.2",
+    "ava": "^0.16.0",
     "eslint": "^3.1.1",
     "eslint-plugin-lodash-fp": "^2.0.0"
   },
