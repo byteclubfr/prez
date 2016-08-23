@@ -27,7 +27,7 @@
     "update-notifier": "^1.0.1"
   },
   "scripts": {
-    "lint": "eslint lib",
+    "lint": "eslint lib bin",
     "test": "ava"
   },
   "author": "Nicolas Chambrier <naholyr@gmail.com>",
