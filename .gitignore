@@ -1,3 +1,5 @@
 npm-debug.log
 .eslintrc
 node_modules
+build
+slides
